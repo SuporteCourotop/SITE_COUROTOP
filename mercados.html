@@ -110,6 +110,8 @@
   .nav .btn{padding:11px 18px;font-size:13px}
   .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
   .burger span{width:24px;height:2px;background:var(--brown);transition:.3s}
+  @keyframes ctblink{0%,100%{opacity:1}50%{opacity:.15}}
+  .menu a.blink{font-weight:800 !important;color:var(--rust);animation:ctblink 1.1s ease-in-out infinite}
 
   .phero{position:relative;padding:150px 0 70px;overflow:hidden}
   .phero .wrap{position:relative;z-index:2}
@@ -195,10 +197,10 @@
       <li><a href="quem-somos.html">Quem Somos</a></li>
       <li><a href="solucoes.html">Soluções</a></li>
       <li><a href="mercados.html" class="active">Mercados</a></li>
-      <li><a href="concessionarias.html">Concessionárias</a></li>
       <li><a href="estrutura-industrial.html">Estrutura Industrial</a></li>
       <li><a href="materiais.html">Materiais</a></li>
       <li><a href="homologacoes.html">Homologações</a></li>
+      <li><a href="concessionarias.html" class="blink">Concessionárias</a></li>
       <li><a href="contato.html">Contato</a></li>
     </ul>
     <a href="contato.html" class="btn btn-primary">Fale com nossa equipe</a>
