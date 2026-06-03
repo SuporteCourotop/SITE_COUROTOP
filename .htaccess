@@ -1,0 +1,70 @@
+# ============================================================
+#  COURO TOP — Configuração de Segurança (.htaccess)
+#  Para hospedagem Apache (a mais comum). Colocar na raiz do site.
+# ============================================================
+
+# ---- 1. FORÇAR HTTPS (cadeado obrigatório) ----
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # redireciona http -> https
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+  # padroniza com www (opcional — descomente se quiser sempre www)
+  # RewriteCond %{HTTP_HOST} !^www\. [NC]
+  # RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
+
+# ---- 2. HEADERS DE SEGURANÇA ----
+<IfModule mod_headers.c>
+  # impede que o site seja embutido em iframe de terceiros (anti-clickjacking)
+  Header always set X-Frame-Options "SAMEORIGIN"
+  # impede o navegador de "adivinhar" tipos de arquivo (anti-MIME-sniffing)
+  Header always set X-Content-Type-Options "nosniff"
+  # controla o que é enviado no referrer (privacidade)
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # restringe APIs sensíveis do navegador
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=()"
+  # força HTTPS por 2 anos, inclusive subdomínios (HSTS)
+  Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+  # remove header que revela a versão do servidor (menos pistas pro atacante)
+  Header unset X-Powered-By
+  Header unset Server
+</IfModule>
+
+# ---- 3. CONTENT SECURITY POLICY (reforço; também está no HTML) ----
+<IfModule mod_headers.c>
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://connect.facebook.net; frame-src https://www.google.com https://www.youtube.com https://player.vimeo.com; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'"
+</IfModule>
+
+# ---- 4. BLOQUEAR ACESSO A ARQUIVOS SENSÍVEIS ----
+# impede que baixem .htaccess, .md, backups, etc.
+<FilesMatch "(^\.|\.(md|bak|old|log|sql|ini|conf|env)$)">
+  Require all denied
+</FilesMatch>
+
+# ---- 5. DESLIGAR LISTAGEM DE PASTAS ----
+# impede que vejam o conteúdo de pastas sem index (ex: /videos/ , /img/)
+Options -Indexes
+
+# ---- 6. PROTEGER CONTRA HOTLINK DE IMAGENS (opcional) ----
+# evita que outros sites usem suas imagens consumindo sua banda
+# <IfModule mod_rewrite.c>
+#   RewriteCond %{HTTP_REFERER} !^$
+#   RewriteCond %{HTTP_REFERER} !^https?://(www\.)?courotop\.com [NC]
+#   RewriteRule \.(jpg|jpeg|png|gif|webp|mp4)$ - [F,NC,L]
+# </IfModule>
+
+# ---- 7. CACHE (performance — ajuda velocidade e custo de Ads) ----
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/html "access plus 1 day"
+</IfModule>
+
+# ---- 8. PÁGINAS DE ERRO (evita expor detalhes do servidor) ----
+ErrorDocument 404 /index.html

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- ============================================================
+     RASTREAMENTO DE ANÚNCIOS (colar os IDs antes de publicar)
+     ------------------------------------------------------------
+     1) GOOGLE TAG (GA4 / Google Ads) - troque G-XXXXXXX pelo seu ID:
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+     gtag('js',new Date());gtag('config','G-XXXXXXX');</script>
+
+     2) META PIXEL (Facebook/Instagram Ads) - troque SEU_PIXEL_ID:
+     <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+     n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+     n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+     t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,
+     'script','https://connect.facebook.net/en_US/fbevents.js');
+     fbq('init','SEU_PIXEL_ID');fbq('track','PageView');</script>
+
+     Ver eventos de conversão (Lead) marcados na página de Contato.
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<!-- ===== SEGURANÇA (camada no HTML; reforçada pelo .htaccess na hospedagem) ===== -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://connect.facebook.net; frame-src https://www.google.com https://www.youtube.com https://player.vimeo.com; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#FAFAF8">
+<meta name="supported-color-schemes" content="light">
+<title>Couro Top — Revestimentos técnicos para assentos</title>
+<meta name="description" content="Especialista em desenvolvimento e produção de revestimentos técnicos para assentos. Desde 2000, desenvolvendo soluções para necessidades dos nossos clientes.">
+<link rel="canonical" href="https://www.courotop.com/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- Open Graph (compartilhamento Facebook/Instagram/WhatsApp) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Couro Top">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://www.courotop.com/">
+<meta property="og:title" content="Couro Top — Revestimentos técnicos para assentos">
+<meta property="og:description" content="Especialista em desenvolvimento e produção de revestimentos técnicos para assentos. Desde 2000, desenvolvendo soluções para necessidades dos nossos clientes.">
+<meta property="og:image" content="https://www.courotop.com/og/og-home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter / X cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Couro Top — Revestimentos técnicos para assentos">
+<meta name="twitter:description" content="Especialista em desenvolvimento e produção de revestimentos técnicos para assentos. Desde 2000, desenvolvendo soluções para necessidades dos nossos clientes.">
+<meta name="twitter:image" content="https://www.courotop.com/og/og-home.jpg">
+<meta name="robots" content="index, follow">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Couro Top",
+  "url":"https://www.courotop.com/",
+  "logo":"https://www.courotop.com/logo-couro-top.png",
+  "description":"Especialista em desenvolvimento e produção de revestimentos técnicos para assentos. Desde 2000.",
+  "foundingDate":"2000",
+  "areaServed":"BR",
+  "contactPoint":{
+    "@type":"ContactPoint",
+    "telephone":"+55-11-3619-2900",
+    "contactType":"sales",
+    "areaServed":"BR",
+    "availableLanguage":"Portuguese"
+  },
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Av. Alexandre Colares, 1032 - Parque Anhanguera",
+    "addressLocality":"São Paulo",
+    "addressRegion":"SP",
+    "postalCode":"05106-000",
+    "addressCountry":"BR"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     VARIÁVEIS DE ESTILO (cores, medidas) — EDITE AQUI para mudar
+     o visual do site inteiro de uma vez. Use o mesmo valor em
+     TODAS as 8 páginas para manter a identidade consistente.
+     ============================================================ */
+  :root{
+    --bg:#FAFAF8;        /* cor de fundo principal (bege claro)        */
+    --bg-alt:#F2F0EC;    /* fundo alternativo (seções/cards mais claros)*/
+    --ink:#1C1A19;       /* cor do texto principal (quase preto)        */
+    --ink-soft:#4A4542;  /* texto secundário (cinza escuro)            */
+    --brown:#401A17;     /* marrom da marca (títulos, botão primário)   */
+    --brown-2:#5E2A22;   /* marrom mais claro (variações)              */
+    --rust:#A8431B;      /* terracota (destaques, ícones, links)        */
+    --rust-2:#C05A2A;    /* terracota mais claro (hover, setas)        */
+    --slate:#535C65;     /* azul-acinzentado (textos de apoio)         */
+    --grid:#DAD6CE;      /* cor das linhas de grade decorativas        */
+    --line:#CFC9BF;      /* cor das bordas de cards e divisórias        */
+    --white:#FFFFFF;     /* branco puro                                */
+    --maxw:1240px;       /* largura máxima do conteúdo (centralizado)   */
+    --r:12px;            /* arredondamento dos cantos dos cards         */
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;color-scheme:light only;-webkit-text-size-adjust:100%;text-size-adjust:100%;background:#FAFAF8 !important}
+  :root{color-scheme:light}
+  /* blindagem anti dark-mode automatico (Safari/Chrome mobile, in-app browsers) */
+  @media (prefers-color-scheme: dark){
+    html,body{background:#FAFAF8 !important;color:#1C1A19 !important}
+  }
+  html{forced-color-adjust:none}
+  body{font-family:'Archivo',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;background-color:#FAFAF8 !important}
+  h1,h2,h3,h4{font-family:'Sora',sans-serif;line-height:1.08;letter-spacing:-.02em;color:var(--brown)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .eyebrow{font-family:'Sora',sans-serif;font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--rust)}
+  .lead{color:var(--ink-soft);font-size:17px}
+  a{color:inherit;text-decoration:none}
+
+  /* blueprint grid background */
+  .grid-bg{
+    position:absolute;inset:0;z-index:0;pointer-events:none;
+    background-image:
+      linear-gradient(var(--grid) 1px,transparent 1px),
+      linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:48px 48px;
+    opacity:.5;
+    -webkit-mask-image:radial-gradient(ellipse 90% 80% at 50% 30%,#000 55%,transparent 100%);
+            mask-image:radial-gradient(ellipse 90% 80% at 50% 30%,#000 55%,transparent 100%);
+  }
+  .cross{position:absolute;width:14px;height:14px;z-index:1;opacity:.5}
+  .cross::before,.cross::after{content:"";position:absolute;background:var(--rust)}
+  .cross::before{left:50%;top:0;width:1px;height:100%;transform:translateX(-.5px)}
+  .cross::after{top:50%;left:0;height:1px;width:100%;transform:translateY(-.5px)}
+
+  /* buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:'Sora',sans-serif;font-weight:600;font-size:14px;letter-spacing:.02em;
+    padding:15px 26px;border-radius:var(--r);transition:.25s ease;cursor:pointer;border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brown);color:#fff}
+  .btn-primary:hover{background:var(--rust);transform:translateY(-2px)}
+  .btn-ghost{border-color:var(--brown);color:var(--brown);background:transparent}
+  .btn-ghost:hover{background:var(--brown);color:#fff}
+  .btn .arr{transition:transform .25s ease}
+  .btn:hover .arr{transform:translateX(4px)}
+
+  /* header */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s ease;
+    background:rgba(250,250,248,.82);backdrop-filter:blur(10px);border-bottom:1px solid transparent}
+  header.scrolled{border-bottom:1px solid var(--line);box-shadow:0 6px 30px rgba(64,26,23,.05)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{display:flex;align-items:baseline;gap:3px;font-family:'Sora';font-weight:800;font-size:22px;color:var(--brown);letter-spacing:-.04em}
+  .logo span{color:var(--rust);font-size:11px;font-weight:700;transform:translateY(-7px);letter-spacing:.1em}
+  .menu{display:flex;gap:24px;list-style:none}
+  .menu a{font-family:'Sora';font-weight:600;font-size:13px;white-space:nowrap;color:var(--ink-soft);position:relative;padding:4px 0;transition:.2s}
+  .menu a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--rust);transition:.25s}
+  .menu a:hover{color:var(--brown)}.menu a:hover::after{width:100%}
+  .nav .btn{padding:11px 20px}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{width:24px;height:2px;background:var(--brown);transition:.3s}
+
+  /* hero */
+  .hero{position:relative;padding:160px 0 90px;overflow:hidden}
+  .hero .wrap{position:relative;z-index:2}
+  .hero-tag{display:inline-flex;align-items:center;gap:0;margin-bottom:30px;
+    border:1px solid var(--line);background:var(--white);border-radius:50px;
+    box-shadow:0 6px 22px rgba(64,26,23,.06);overflow:hidden}
+  .hero-tag .since{font-family:'Sora';font-weight:700;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--brown);padding:0 16px 0 20px}
+  .hero-tag .yr{display:flex;align-items:center;gap:8px;background:var(--brown);color:#fff;padding:11px 22px 11px 18px;border-radius:0 50px 50px 0;position:relative}
+  .hero-tag .yr::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--rust-2);box-shadow:0 0 0 0 rgba(192,90,42,.5);animation:beat 2.4s infinite}
+  .hero-tag .yr b{font-family:'Sora';font-weight:800;font-size:20px;letter-spacing:.02em;line-height:1}
+  @keyframes beat{0%{box-shadow:0 0 0 0 rgba(192,90,42,.5)}70%{box-shadow:0 0 0 7px rgba(192,90,42,0)}100%{box-shadow:0 0 0 0 rgba(192,90,42,0)}}
+  .hero h1{font-size:clamp(44px,7vw,86px);font-weight:800;max-width:13ch}
+  .hero h1 em{font-style:normal;color:var(--rust)}
+  .hero-sub{font-family:'Sora';font-weight:600;font-size:clamp(18px,2.4vw,24px);color:var(--brown-2);margin-top:22px;max-width:30ch;letter-spacing:-.01em}
+  .hero-support{margin-top:18px;max-width:48ch;font-size:16px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
+  .hero-pillars{display:flex;gap:34px;flex-wrap:wrap;margin-top:60px;padding-top:34px;border-top:1px solid var(--line)}
+  .pillar{display:flex;align-items:center;gap:12px}
+  .pillar svg{width:30px;height:30px;flex:none}
+  .pillar b{display:block;font-family:'Sora';font-weight:700;font-size:14px;color:var(--brown);line-height:1.2}
+  .pillar small{font-size:12.5px;color:var(--slate)}
+
+  /* generic section */
+  section{position:relative}
+  .sec{padding:96px 0}
+  .sec-head{max-width:720px;margin-bottom:54px}
+  .sec-head h2{font-size:clamp(30px,4.4vw,48px);font-weight:800;margin-top:14px}
+  .sec-head p{margin-top:18px}
+
+  /* quem somos split */
+  .split{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center}
+  .ph{position:relative;border:1px solid var(--line);background:var(--bg-alt);border-radius:var(--r);
+    display:flex;align-items:center;justify-content:center;text-align:center;color:var(--slate);
+    font-family:'Sora';font-weight:600;font-size:13px;overflow:hidden;min-height:340px}
+  .ph::before{content:"";position:absolute;inset:0;
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:30px 30px;opacity:.5}
+  .ph .tag{position:relative;z-index:2;border:1px dashed var(--rust);color:var(--rust);padding:10px 16px;border-radius:4px;background:rgba(255,255,255,.7);max-width:80%}
+  .quem-video{position:relative;border-radius:var(--r);overflow:hidden;background:#2A1310;min-height:380px;max-height:520px;display:flex;align-items:center;justify-content:center}
+  .quem-video video{height:100%;max-height:520px;width:auto;max-width:100%;display:block;border-radius:var(--r)}
+  .quem h2{font-size:clamp(26px,3.2vw,38px);font-weight:800}
+  .quem p{margin-top:18px;color:var(--ink-soft)}
+
+  /* o que fazemos cards */
+  .alt{background:var(--bg-alt)}
+  .cards4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .card{position:relative;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:30px 26px;transition:.3s ease;overflow:hidden}
+  .card::before{content:"";position:absolute;top:0;left:0;height:3px;width:0;background:var(--rust);transition:.35s ease}
+  .card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(64,26,23,.09);border-color:transparent}
+  .card:hover::before{width:100%}
+  .card .num{font-family:'Sora';font-weight:800;font-size:13px;color:var(--line);letter-spacing:.1em}
+  .card svg{width:38px;height:38px;margin:14px 0 16px;color:var(--rust)}
+  .card h3{font-size:18px;font-weight:700}
+  .card p{margin-top:10px;font-size:14.5px;color:var(--ink-soft)}
+
+  /* mercados */
+  .mkt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .mkt{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:0;padding:26px 24px;background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:.28s ease}
+  .mkt::before{content:"";position:absolute;top:0;left:0;height:3px;width:0;background:var(--rust);transition:.35s ease}
+  .mkt:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(64,26,23,.10);border-color:transparent}
+  .mkt:hover::before{width:100%}
+  .mkt .ic{width:46px;height:46px;border-radius:50%;background:rgba(168,67,27,.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:.28s ease}
+  .mkt:hover .ic{background:var(--rust);transform:scale(1.05)}
+  .mkt svg{width:24px;height:24px;flex:none;color:var(--rust);transition:.28s ease}
+  .mkt:hover svg{color:#fff}
+  .mkt b{font-family:'Sora';font-weight:700;font-size:15.5px;color:var(--brown);line-height:1.2}
+  .mkt small{display:block;color:var(--slate);font-size:12.5px;font-weight:400;margin-top:5px;font-family:'Archivo'}
+  .mkt.allmkt{background:var(--brown);border-color:var(--brown);justify-content:center}
+  .mkt.allmkt:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(64,26,23,.22)}
+  .mkt.allmkt a{display:flex;align-items:center;gap:10px;width:100%;height:100%}
+
+  /* diferenciais */
+  .diff-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+  .diff{padding:28px 22px;border-left:2px solid var(--rust);background:var(--white);border-radius:0 var(--r) var(--r) 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .diff .n{font-family:'Sora';font-weight:800;font-size:30px;color:var(--bg-alt);-webkit-text-stroke:1px var(--line);line-height:1}
+  .diff p{margin-top:14px;font-family:'Sora';font-weight:600;font-size:14.5px;color:var(--brown);line-height:1.3}
+
+  /* estrutura industrial band */
+  .indu{position:relative;background:var(--brown);color:#fff;overflow:hidden}
+  .indu .grid-bg{background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);opacity:1;mask-image:none;-webkit-mask-image:none}
+  .indu .wrap{position:relative;z-index:2}
+  .indu h2{color:#fff;font-size:clamp(28px,3.6vw,42px);font-weight:800;max-width:18ch}
+  .indu p{color:rgba(255,255,255,.82);margin-top:20px;max-width:60ch}
+  .indu .eyebrow{color:var(--rust-2)}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:54px}
+  .stat .v{font-family:'Sora';font-weight:800;font-size:clamp(34px,4vw,52px);color:#fff;line-height:1}
+  .stat .v span{color:var(--rust-2)}
+  .stat .l{margin-top:8px;font-size:13px;color:rgba(255,255,255,.7);font-family:'Sora';font-weight:500}
+
+  /* materiais */
+  .mat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .mat{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--white);transition:.3s}
+  .mat:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(64,26,23,.08)}
+  .mat .img{position:relative;height:170px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center}
+  .mat .img::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:26px 26px;opacity:.5}
+  .mat .img .tag{position:relative;z-index:2;font-family:'Sora';font-size:11px;font-weight:600;color:var(--rust);border:1px dashed var(--rust);padding:6px 10px;border-radius:4px;background:rgba(255,255,255,.7)}
+  .mat .b{padding:22px 22px 26px}
+  .mat h3{font-size:17px;font-weight:700}
+  .mat p{margin-top:8px;font-size:13.5px;color:var(--ink-soft)}
+
+  /* CTA final */
+  .cta{position:relative;text-align:center;padding:110px 0;overflow:hidden;background:var(--bg-alt)}
+  .cta .wrap{position:relative;z-index:2}
+  .cta h2{font-size:clamp(30px,4.6vw,52px);font-weight:800;max-width:18ch;margin:0 auto}
+  .cta p{max-width:54ch;margin:20px auto 36px}
+
+  /* footer */
+  footer{background:#2A1310;color:rgba(255,255,255,.7);padding:64px 0 30px;font-size:14px}
+  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .foot-top .logo{color:#fff}.foot-top .logo span{color:var(--rust-2)}
+  footer h4{color:#fff;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;font-weight:700}
+  footer ul{list-style:none}footer li{margin-bottom:10px}
+  footer a:hover{color:var(--rust-2)}
+  .foot-desc{margin-top:18px;max-width:34ch;font-size:13.5px;line-height:1.7}
+  .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;font-size:12.5px;color:rgba(255,255,255,.45)}
+
+  /* reveal */
+  [data-rv]{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  [data-rv].in{opacity:1;transform:none}
+
+  @media(max-width:1080px){.menu{gap:16px}.menu a{font-size:12.5px}}
+  @media(max-width:980px){
+    .cards4,.mat-grid{grid-template-columns:repeat(2,1fr)}
+    .diff-grid{grid-template-columns:repeat(2,1fr)}
+    .mkt-grid{grid-template-columns:repeat(2,1fr)}
+    .split{grid-template-columns:1fr;gap:32px}
+    .stats{grid-template-columns:repeat(2,1fr);gap:32px}
+    .foot-top{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:680px){
+    .menu,.nav>.btn{display:none}
+    .burger{display:flex}
+    .menu.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:var(--bg);
+      padding:24px 28px;gap:18px;border-bottom:1px solid var(--line);box-shadow:0 20px 40px rgba(64,26,23,.08)}
+    .cards4,.mat-grid,.diff-grid,.mkt-grid,.stats{grid-template-columns:1fr}
+    .hero{padding-top:120px}
+    .foot-top{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#" class="logo">COURO TOP <span>®</span></a>
+    <ul class="menu" id="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="quem-somos.html">Quem Somos</a></li>
+      <li><a href="solucoes.html">Soluções</a></li>
+      <li><a href="mercados.html">Mercados</a></li>
+      <li><a href="estrutura-industrial.html">Estrutura Industrial</a></li>
+      <li><a href="materiais.html">Materiais</a></li>
+      <li><a href="homologacoes.html">Homologações</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <a href="contato.html" class="btn btn-primary">Fale com nossa equipe</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="grid-bg"></div>
+  <span class="cross" style="top:120px;left:8%"></span>
+  <span class="cross" style="top:230px;right:12%"></span>
+  <span class="cross" style="bottom:90px;left:18%"></span>
+  <div class="wrap">
+    <span class="hero-tag" data-rv>
+      <span class="since">Desde</span>
+      <span class="yr"><b>2000</b></span>
+    </span>
+    <h1 data-rv>Transformando necessidades em <em>soluções.</em></h1>
+    <p class="hero-sub" data-rv>Especialista em desenvolvimento e produção de revestimentos técnicos para assentos.</p>
+    <p class="hero-support lead" data-rv>Conhecimento de materiais, desenvolvimento técnico e estrutura industrial para transformar necessidades em soluções consistentes.</p>
+  </div>
+</section>
+
+<!-- ============ QUEM SOMOS ============ -->
+<section class="sec quem">
+  <div class="wrap split">
+    <div class="quem-video" data-rv>
+      <video controls preload="metadata" poster="img/poster-tour-fabrica.jpg" playsinline>
+        <source src="videos/tour-fabrica.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo HTML5.
+      </video>
+    </div>
+    <div>
+      <span class="eyebrow" data-rv>Quem somos</span>
+      <h2 data-rv>Desde 2000, desenvolvendo soluções com conhecimento técnico e visão industrial.</h2>
+      <p data-rv>A Couro Top nasceu do trabalho com couro, um material que exige domínio técnico, precisão e profundo conhecimento de processo. Foi no couro que se formou a base da experiência da empresa.</p>
+      <p data-rv>Ao longo dos anos, esse conhecimento foi ampliado para diferentes materiais aplicados a revestimentos técnicos para assentos, mantendo o mesmo compromisso com qualidade, desenvolvimento técnico e confiabilidade.</p>
+      <p data-rv>Hoje a Couro Top combina desenvolvimento técnico, corte automatizado e costura industrial para atender projetos em diferentes mercados.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ O QUE FAZEMOS ============ -->
+<section class="sec alt">
+  <div class="grid-bg" style="opacity:.3"></div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <div class="sec-head" data-rv>
+      <span class="eyebrow">O que fazemos</span>
+      <h2>Desenvolvimento e produção de revestimentos técnicos para assentos</h2>
+      <p class="lead">A Couro Top atua desde o entendimento da necessidade do cliente até o desenvolvimento e a produção da solução. Trabalhamos com couro natural, materiais sintéticos, tecidos técnicos e outros materiais aplicados, sempre buscando a combinação mais adequada para cada projeto.</p>
+    </div>
+    <div class="cards4">
+      <div class="card" data-rv>
+        <span class="num">01</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+        <h3>Desenvolvimento técnico</h3>
+        <p>Transformamos necessidades em soluções viáveis, com análise técnica, definição de materiais e desenvolvimento da solução mais adequada para cada aplicação.</p>
+      </div>
+      <div class="card" data-rv>
+        <span class="num">02</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 18v-6a8 8 0 0 1 16 0v6"/><path d="M2 18h20"/><path d="M6 18v2M18 18v2"/></svg>
+        <h3>Revestimentos para assentos</h3>
+        <p>Desenvolvemos soluções para diferentes tipos de assentos, considerando uso, durabilidade, acabamento e exigência técnica.</p>
+      </div>
+      <div class="card" data-rv>
+        <span class="num">03</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18"/><path d="m7 14 3-3 3 3 5-6"/></svg>
+        <h3>Corte automatizado</h3>
+        <p>Precisão, padronização e melhor aproveitamento de material para projetos com diferentes níveis de complexidade.</p>
+      </div>
+      <div class="card" data-rv>
+        <span class="num">04</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v20"/><path d="M5 7c3 0 4 2 7 2s4-2 7-2"/><path d="M5 14c3 0 4 2 7 2s4-2 7-2"/></svg>
+        <h3>Costura industrial e produção</h3>
+        <p>Execução técnica e produção estruturada para garantir consistência, qualidade e confiabilidade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MERCADOS ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head" data-rv>
+      <span class="eyebrow">Mercados atendidos</span>
+      <h2>Soluções para diferentes mercados</h2>
+      <p class="lead">A Couro Top desenvolve revestimentos técnicos para assentos aplicados a diferentes segmentos.</p>
+    </div>
+    <div class="mkt-grid" data-rv>
+      <div class="mkt"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 13 6.5 8.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13"/><path d="M5 13h14v4H5z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></span><b>Automotivo</b><small>Acabamento à altura do veículo</small></div>
+      <div class="mkt"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="13" height="11" rx="1"/><path d="M16 9h4l1 3v5h-5"/><circle cx="7" cy="18" r="1.5"/><circle cx="17" cy="18" r="1.5"/></svg></span><b>Frotas corporativas</b><small>Resistência para a rotina intensa</small></div>
+      <div class="mkt"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 11 7 6h10l2 5"/><rect x="3" y="11" width="18" height="6" rx="1"/><path d="M12 3v3"/><circle cx="7" cy="18" r="1.3"/><circle cx="17" cy="18" r="1.3"/></svg></span><b>Viaturas especiais</b><small>Soluções para missões exigentes</small></div>
+      <div class="mkt"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="5" width="16" height="11" rx="1"/><path d="M4 12h16"/><path d="M8 16v2M16 16v2"/><path d="M7 8h3M14 8h3"/></svg></span><b>Transporte coletivo</b><small>Feito para durar quilômetros</small></div>
+      <div class="mkt"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 14h18l-2 4H7l-4-4Z"/><path d="M5 14V8l9-2 4 8"/></svg></span><b>Náutico</b><small>Resistência que encara o mar</small></div>
+      <div class="mkt"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12 12 14 3 12l1-2 7 1V5l1.5-1L13 11l7-1 1 2Z"/></svg></span><b>Aeronáutico</b><small>Precisão que voa alto</small></div>
+      <div class="mkt"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 18V9l7-4 7 4v9"/><path d="M5 18h14"/><path d="M9 18v-4h6v4"/></svg></span><b>Auditórios</b><small>Conforto que acolhe plateias</small></div>
+      <div class="mkt"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="12" rx="1"/><path d="M8 20h8M12 16v4"/></svg></span><b>Cinemas</b><small>A poltrona que vive a cena</small></div>
+      <div class="mkt"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 10V6a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v4"/><path d="M6 10h8v5a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3z"/><path d="M9 18v3M11 18v3"/></svg></span><b>Cadeiras e poltronas técnicas</b><small>Performance em cada detalhe</small></div>
+      <div class="mkt allmkt"><a href="mercados.html"><b style="color:#fff">Ver todos os mercados</b><span style="color:var(--rust-2);font-family:Sora;font-weight:700">→</span></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIFERENCIAIS ============ -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="sec-head" data-rv>
+      <span class="eyebrow">Diferenciais</span>
+      <h2>Conhecimento, estrutura e experiência</h2>
+      <p class="lead">A trajetória da Couro Top foi construída com base em conhecimento técnico, evolução constante e relações de confiança com clientes e fornecedores.</p>
+    </div>
+    <div class="diff-grid">
+      <div class="diff" data-rv><div class="n">01</div><p>Desenvolvimento técnico de soluções</p></div>
+      <div class="diff" data-rv><div class="n">02</div><p>Domínio de diferentes materiais</p></div>
+      <div class="diff" data-rv><div class="n">03</div><p>Estrutura industrial especializada</p></div>
+      <div class="diff" data-rv><div class="n">04</div><p>Experiência acumulada desde 2000</p></div>
+      <div class="diff" data-rv><div class="n">05</div><p>Parcerias duradouras</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESTRUTURA INDUSTRIAL ============ -->
+<section class="sec indu">
+  <div class="grid-bg"></div>
+  <div class="wrap">
+    <span class="eyebrow" data-rv>Estrutura industrial</span>
+    <h2 data-rv>Estrutura industrial para projetos exigentes</h2>
+    <p data-rv>A Couro Top reúne desenvolvimento técnico, corte automatizado e costura industrial, permitindo atender projetos com diferentes materiais e níveis de complexidade. Conta com um dos maiores parques de corte automatizado para couro da América Latina, além de equipamentos preparados para o corte de materiais sintéticos e outras aplicações técnicas.</p>
+    <div class="stats">
+      <div class="stat" data-rv><div class="v" data-count="2000">2000</div><div class="l">Ano de fundação</div></div>
+      <div class="stat" data-rv><div class="v"><span>ISO</span> 9001</div><div class="l">Gestão da qualidade certificada</div></div>
+      <div class="stat" data-rv><div class="v" data-count="130">0</div><div class="l">Conjuntos/dia de capacidade</div></div>
+      <div class="stat" data-rv><div class="v" data-count="290">0</div><div class="l">+ Colaboradores especializados</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MATERIAIS ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head" data-rv>
+      <span class="eyebrow">Materiais</span>
+      <h2>Domínio de diferentes materiais</h2>
+      <p class="lead">A Couro Top nasceu do trabalho com couro, mas ao longo dos anos ampliou sua atuação para diferentes materiais aplicados a revestimentos técnicos para assentos.</p>
+    </div>
+    <div class="mat-grid">
+      <div class="mat" data-rv><div class="img"><span class="tag">[ IMG — couro natural ]</span></div><div class="b"><h3>Couro natural</h3><p>Material nobre na origem da empresa, que exige experiência, sensibilidade e domínio de processo.</p></div></div>
+      <div class="mat" data-rv><div class="img"><span class="tag">[ IMG — sintético perfurado ]</span></div><div class="b"><h3>Materiais sintéticos</h3><p>Ampliam as possibilidades técnicas e de aplicação, adequando-se a diferentes necessidades de uso.</p></div></div>
+      <div class="mat" data-rv><div class="img"><span class="tag">[ IMG — tecido técnico ]</span></div><div class="b"><h3>Tecidos técnicos</h3><p>Parte do repertório de materiais trabalhados, contribuindo para soluções específicas por projeto.</p></div></div>
+      <div class="mat" data-rv><div class="img"><span class="tag">[ IMG — composição de materiais ]</span></div><div class="b"><h3>Outros materiais aplicados</h3><p>Avaliamos cada aplicação para definir a melhor combinação, com foco em desempenho e adequação técnica.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="cta">
+  <div class="grid-bg" style="opacity:.4"></div>
+  <span class="cross" style="top:50px;left:14%"></span>
+  <span class="cross" style="bottom:50px;right:14%"></span>
+  <div class="wrap">
+    <span class="eyebrow" data-rv>Vamos conversar</span>
+    <h2 data-rv style="margin-top:14px">Vamos desenvolver a solução para o seu projeto</h2>
+    <p data-rv class="lead">Nossa equipe está preparada para entender sua necessidade e desenvolver a solução técnica mais adequada para sua aplicação.</p>
+    <a href="contato.html" class="btn btn-primary" data-rv>Fale com a Couro Top <span class="arr">→</span></a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a href="#" class="logo">COURO TOP <span>®</span></a>
+        <p class="foot-desc">Especialista em desenvolvimento e produção de revestimentos técnicos para assentos. Desde 2000.</p>
+      </div>
+      <div>
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="quem-somos.html">Quem Somos</a></li>
+          <li><a href="solucoes.html">Soluções</a></li>
+          <li><a href="mercados.html">Mercados</a></li>
+          <li><a href="estrutura-industrial.html">Estrutura Industrial</a></li>
+          <li><a href="materiais.html">Materiais</a></li>
+          <li><a href="homologacoes.html">Homologações</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li>(11) 3619-2900</li>
+          <li><a href="https://wa.me/5511974607277" target="_blank" rel="noopener">WhatsApp (11) 97460-7277</a></li>
+          <li><a href="mailto:atendimento@courotop.com">atendimento@courotop.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Matriz</h4>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Couro+Top+Av.+Alexandre+Colares+1032+Parque+Anhanguera+São+Paulo+SP" target="_blank" rel="noopener">Av. Alexandre Colares, 1032</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Couro+Top+Av.+Alexandre+Colares+1032+Parque+Anhanguera+São+Paulo+SP" target="_blank" rel="noopener">Parque Anhanguera — São Paulo/SP</a></li>
+          <li>Filiais: <a href="https://www.google.com/maps/search/?api=1&query=Av.+Orosimbo+Maia+1515+Vila+Itapura+Campinas+SP" target="_blank" rel="noopener">Campinas</a> · <a href="https://www.google.com/maps/search/?api=1&query=Estr.+do+Tindiba+845+Pechincha+Rio+de+Janeiro+RJ" target="_blank" rel="noopener">Rio de Janeiro</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="yr"></span> Couro Top — Todos os direitos reservados.</span>
+      <span>Desenvolvimento e produção de revestimentos técnicos para assentos.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/5511974607277" target="_blank" rel="noopener" aria-label="WhatsApp" style="position:fixed;right:22px;bottom:22px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.2);transition:.25s">
+  <svg viewBox="0 0 24 24" style="width:30px;height:30px;fill:#fff"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.523 5.27l-.999 3.648 3.535-.927zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+</a>
+
+<script>
+  // header scroll
+  const hdr=document.getElementById('hdr');
+  addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>20));
+  // burger
+  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>menu.classList.toggle('open'));
+  // reveal
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('[data-rv]').forEach((el,i)=>{el.style.transitionDelay=(i%4*60)+'ms';io.observe(el)});
+  // counters
+  const cio=new IntersectionObserver((es)=>{es.forEach(e=>{
+    if(!e.isIntersecting)return;const el=e.target,end=+el.dataset.count;
+    if(end>=2000){el.textContent=end;cio.unobserve(el);return}
+    let s=0;const t=setInterval(()=>{s+=Math.ceil(end/40);if(s>=end){s=end;clearInterval(t)}el.textContent=s+'+'},22);
+    cio.unobserve(el);
+  })},{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  // ===== CONVERSÃO: clique no WhatsApp (Lead) =====
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
+    a.addEventListener('click',function(){
+      if(window.fbq) fbq('track','Contact');
+      if(window.gtag) gtag('event','click_whatsapp');
+    });
+  });
+</script>
+</body>
+</html>

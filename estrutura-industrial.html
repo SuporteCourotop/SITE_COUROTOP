@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- ============================================================
+     RASTREAMENTO DE ANÚNCIOS (colar os IDs antes de publicar)
+     ------------------------------------------------------------
+     1) GOOGLE TAG (GA4 / Google Ads) - troque G-XXXXXXX pelo seu ID:
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+     gtag('js',new Date());gtag('config','G-XXXXXXX');</script>
+
+     2) META PIXEL (Facebook/Instagram Ads) - troque SEU_PIXEL_ID:
+     <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+     n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+     n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+     t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,
+     'script','https://connect.facebook.net/en_US/fbevents.js');
+     fbq('init','SEU_PIXEL_ID');fbq('track','PageView');</script>
+
+     Ver eventos de conversão (Lead) marcados na página de Contato.
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<!-- ===== SEGURANÇA (camada no HTML; reforçada pelo .htaccess na hospedagem) ===== -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://connect.facebook.net; frame-src https://www.google.com https://www.youtube.com https://player.vimeo.com; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#FAFAF8">
+<meta name="supported-color-schemes" content="light">
+<title>Estrutura Industrial — Couro Top</title>
+<meta name="description" content="Estrutura industrial dedicada ao desenvolvimento e produção de revestimentos técnicos para assentos: corte automatizado, costura industrial, equipe técnica e processos certificados ISO 9001.">
+<link rel="canonical" href="https://www.courotop.com/estrutura-industrial.html">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- Open Graph (compartilhamento Facebook/Instagram/WhatsApp) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Couro Top">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://www.courotop.com/estrutura-industrial.html">
+<meta property="og:title" content="Estrutura Industrial — Couro Top">
+<meta property="og:description" content="Estrutura industrial dedicada ao desenvolvimento e produção de revestimentos técnicos para assentos: corte automatizado, costura industrial, equipe técnica e processos certificados ISO 9001.">
+<meta property="og:image" content="https://www.courotop.com/og/og-estrutura.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter / X cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Estrutura Industrial — Couro Top">
+<meta name="twitter:description" content="Estrutura industrial dedicada ao desenvolvimento e produção de revestimentos técnicos para assentos: corte automatizado, costura industrial, equipe técnica e processos certificados ISO 9001.">
+<meta name="twitter:image" content="https://www.courotop.com/og/og-estrutura.jpg">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     VARIÁVEIS DE ESTILO (cores, medidas) — EDITE AQUI para mudar
+     o visual. Mantenha os MESMOS valores nas 8 páginas.
+     --bg: fundo principal | --bg-alt: fundo de seções/cards
+     --ink: texto principal | --ink-soft: texto secundário
+     --brown: marrom da marca (títulos/botão) | --rust: terracota (destaques)
+     --rust-2: terracota claro (hover) | --slate: cinza de apoio
+     --grid: linhas de grade | --line: bordas | --maxw: largura máx.
+     --r: arredondamento dos cantos dos cards
+     ============================================================ */
+  :root{
+    --bg:#FAFAF8;--bg-alt:#F2F0EC;--ink:#1C1A19;--ink-soft:#4A4542;
+    --brown:#401A17;--brown-2:#5E2A22;--rust:#A8431B;--rust-2:#C05A2A;
+    --slate:#535C65;--grid:#DAD6CE;--line:#CFC9BF;--white:#FFFFFF;--maxw:1240px;--r:12px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;color-scheme:light only;-webkit-text-size-adjust:100%;text-size-adjust:100%;background:#FAFAF8 !important}
+  :root{color-scheme:light}
+  @media (prefers-color-scheme: dark){html,body{background:#FAFAF8 !important;color:#1C1A19 !important}}
+  html{forced-color-adjust:none}
+  body{font-family:'Archivo',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;background-color:#FAFAF8 !important}
+  h1,h2,h3,h4{font-family:'Sora',sans-serif;line-height:1.1;letter-spacing:-.02em;color:var(--brown)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .eyebrow{font-family:'Sora',sans-serif;font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--rust)}
+  .lead{color:var(--ink-soft);font-size:17px}
+  a{color:inherit;text-decoration:none}
+
+  .grid-bg{position:absolute;inset:0;z-index:0;pointer-events:none;
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:48px 48px;opacity:.5;
+    -webkit-mask-image:radial-gradient(ellipse 90% 80% at 50% 30%,#000 55%,transparent 100%);
+            mask-image:radial-gradient(ellipse 90% 80% at 50% 30%,#000 55%,transparent 100%)}
+  .cross{position:absolute;width:14px;height:14px;z-index:1;opacity:.5}
+  .cross::before,.cross::after{content:"";position:absolute;background:var(--rust)}
+  .cross::before{left:50%;top:0;width:1px;height:100%;transform:translateX(-.5px)}
+  .cross::after{top:50%;left:0;height:1px;width:100%;transform:translateY(-.5px)}
+
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:'Sora',sans-serif;font-weight:600;font-size:14px;
+    padding:15px 26px;border-radius:var(--r);transition:.25s ease;cursor:pointer;border:1px solid transparent}
+  .btn-primary{background:var(--brown);color:#fff}
+  .btn-primary:hover{background:var(--rust);transform:translateY(-2px)}
+  .btn .arr{transition:transform .25s ease}.btn:hover .arr{transform:translateX(4px)}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s ease;background:rgba(250,250,248,.82);backdrop-filter:blur(10px);border-bottom:1px solid transparent}
+  header.scrolled{border-bottom:1px solid var(--line);box-shadow:0 6px 30px rgba(64,26,23,.05)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{display:flex;align-items:baseline;gap:3px;font-family:'Sora';font-weight:800;font-size:22px;color:var(--brown);letter-spacing:-.04em}
+  .logo span{color:var(--rust);font-size:11px;font-weight:700;transform:translateY(-7px);letter-spacing:.1em}
+  .menu{display:flex;gap:24px;list-style:none}
+  .menu a{font-family:'Sora';font-weight:600;font-size:13px;color:var(--ink-soft);position:relative;padding:4px 0;transition:.2s;white-space:nowrap}
+  .menu a.active{color:var(--brown)}
+  .menu a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--rust);transition:.25s}
+  .menu a:hover{color:var(--brown)}.menu a:hover::after,.menu a.active::after{width:100%}
+  .nav .btn{padding:11px 18px;font-size:13px}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{width:24px;height:2px;background:var(--brown);transition:.3s}
+
+  .phero{position:relative;padding:150px 0 70px;overflow:hidden}
+  .phero .wrap{position:relative;z-index:2}
+  .crumb{font-family:'Sora';font-weight:600;font-size:12.5px;color:var(--slate);margin-bottom:20px}
+  .crumb a:hover{color:var(--rust)}
+  .phero h1{font-size:clamp(40px,6vw,72px);font-weight:800}
+  .phero p{margin-top:22px;max-width:62ch;font-size:18px;color:var(--ink-soft)}
+
+  section{position:relative}
+  .sec{padding:90px 0}
+  .alt{background:var(--bg-alt)}
+  .sec-head{max-width:720px;margin-bottom:48px}
+  .sec-head h2{font-size:clamp(28px,4vw,44px);font-weight:800;margin-top:14px}
+  .sec-head p{margin-top:16px}
+
+  /* stats band */
+  .stats-band{position:relative;background:var(--brown);color:#fff;overflow:hidden}
+  .stats-band .grid-bg{background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);opacity:1;mask-image:none;-webkit-mask-image:none}
+  .stats-band .wrap{position:relative;z-index:2}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .stat .v{font-family:'Sora';font-weight:800;font-size:clamp(32px,4vw,50px);color:#fff;line-height:1}
+  .stat .v span{color:var(--rust-2)}
+  .stat .l{margin-top:8px;font-size:13px;color:rgba(255,255,255,.72);font-family:'Sora';font-weight:500}
+
+  /* feature rows */
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:34px}
+  .frow:last-child{margin-bottom:0}
+  .frow:nth-child(even) .ftext{order:2}
+  .ph{position:relative;border:1px solid var(--line);background:var(--bg-alt);border-radius:var(--r);display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;min-height:320px}
+  .ph::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:30px 30px;opacity:.5}
+  .ph .tag{position:relative;z-index:2;border:1px dashed var(--rust);color:var(--rust);padding:10px 16px;border-radius:4px;background:rgba(255,255,255,.7);max-width:80%;font-family:'Sora';font-weight:600;font-size:13px}
+  .ftext .eyebrow{margin-bottom:12px;display:block}
+  .ftext h3{font-size:clamp(22px,2.8vw,30px);font-weight:800}
+  .ftext p{margin-top:16px;color:var(--ink-soft)}
+
+  /* processo - 2 cards */
+  .proc{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .proc .card{position:relative;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:34px 30px;overflow:hidden;transition:.3s}
+  .proc .card::before{content:"";position:absolute;top:0;left:0;height:3px;width:0;background:var(--rust);transition:.35s}
+  .proc .card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(64,26,23,.09);border-color:transparent}
+  .proc .card:hover::before{width:100%}
+  .proc svg{width:42px;height:42px;color:var(--rust);margin-bottom:18px}
+  .proc h3{font-size:20px;font-weight:700}
+  .proc p{margin-top:12px;font-size:15px;color:var(--ink-soft)}
+
+  /* milestones inline */
+  .miles{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+  .mile{display:flex;align-items:center;gap:10px;border:1px solid var(--line);background:var(--white);border-radius:30px;padding:10px 18px}
+  .mile b{font-family:'Sora';font-weight:800;color:var(--rust);font-size:15px}
+  .mile span{font-size:13.5px;color:var(--ink-soft)}
+
+  .cta{position:relative;text-align:center;padding:100px 0;overflow:hidden;background:var(--bg-alt)}
+  .cta .wrap{position:relative;z-index:2}
+  .cta h2{font-size:clamp(28px,4.4vw,48px);font-weight:800;max-width:18ch;margin:0 auto}
+  .cta p{max-width:54ch;margin:18px auto 34px}
+
+  footer{background:#2A1310;color:rgba(255,255,255,.7);padding:64px 0 30px;font-size:14px}
+  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .foot-top .logo{color:#fff}.foot-top .logo span{color:var(--rust-2)}
+  footer h4{color:#fff;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;font-weight:700}
+  footer ul{list-style:none}footer li{margin-bottom:10px}
+  footer a:hover{color:var(--rust-2)}
+  .foot-desc{margin-top:18px;max-width:34ch;font-size:13.5px;line-height:1.7}
+  .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;font-size:12.5px;color:rgba(255,255,255,.45)}
+
+  .wa{position:fixed;right:22px;bottom:22px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.2);transition:.25s}
+  .wa:hover{transform:scale(1.08)}.wa svg{width:30px;height:30px;fill:#fff}
+
+  /* layout duas colunas (seção equipe) */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .prose h3{color:var(--brown)}
+  /* ===== SEÇÃO AIRBAG (destaque, fundo escuro) ===== */
+  .airbag{position:relative;background:var(--brown);color:#fff;overflow:hidden}
+  .airbag .grid-bg{background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);opacity:1;mask-image:none;-webkit-mask-image:none}
+  .airbag .wrap{position:relative;z-index:2}
+  .airbag .eyebrow{color:var(--rust-2)}
+  .airbag h2{color:#fff;font-size:clamp(28px,3.8vw,44px);font-weight:800;max-width:20ch;margin-top:14px}
+  .airbag .intro{color:rgba(255,255,255,.85);max-width:60ch;margin-top:18px;font-size:16px}
+  .ab-seal{display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:50px;padding:10px 20px;margin-top:24px}
+  .ab-seal svg{width:22px;height:22px;stroke:var(--rust-2);flex:none}
+  .ab-seal b{font-family:'Sora';font-weight:700;font-size:14px;color:#fff}
+  .ab-seal span{font-size:13px;color:rgba(255,255,255,.7)}
+  .ab-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;margin-top:48px;align-items:stretch}
+  .ab-video{position:relative;border:1px solid rgba(255,255,255,.16);border-radius:var(--r);overflow:hidden;background:#1a0d0b;min-height:300px}
+  .ab-video iframe,.ab-video video{width:100%;height:100%;border:0;display:block;object-fit:cover}
+  .ab-video .vph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+    background:repeating-linear-gradient(45deg,#2a1310,#2a1310 16px,#311612 16px,#311612 32px)}
+  .ab-video .vph .play{width:64px;height:64px;border-radius:50%;background:rgba(192,90,42,.95);display:flex;align-items:center;justify-content:center}
+  .ab-video .vph .play svg{width:26px;height:26px;fill:#fff;margin-left:3px}
+  .ab-video .vph span{font-family:'Sora';font-weight:600;font-size:12px;color:rgba(255,255,255,.7);text-align:center;padding:0 24px}
+  .ab-side{display:flex;flex-direction:column;gap:24px}
+  .ab-stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:24px}
+  .ab-stat .v{font-family:'Sora';font-weight:800;font-size:clamp(28px,3.5vw,40px);color:#fff;line-height:1}
+  .ab-stat .v span{color:var(--rust-2)}
+  .ab-stat .l{margin-top:8px;font-size:13.5px;color:rgba(255,255,255,.72)}
+  .ab-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+  .ab-ph{position:relative;border:1px solid rgba(255,255,255,.16);border-radius:var(--r);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden;
+    background:repeating-linear-gradient(45deg,#2a1310,#2a1310 14px,#311612 14px,#311612 28px)}
+  .ab-ph span{font-family:'Sora';font-weight:600;font-size:11px;color:var(--rust-2);border:1px dashed var(--rust-2);padding:5px 10px;border-radius:4px;background:rgba(0,0,0,.2);text-align:center}
+  .ab-how{margin-top:40px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:30px 28px}
+  .ab-how h3{color:#fff;font-size:20px;font-weight:700}
+  .ab-how p{color:rgba(255,255,255,.82);margin-top:12px;max-width:70ch;font-size:14.5px}
+
+  /* ===== PROCESSO PRODUTIVO ===== */
+  .proc-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:64px}
+  .pstep{position:relative;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:28px 24px;overflow:hidden;transition:.3s}
+  .pstep::before{content:"";position:absolute;top:0;left:0;height:3px;width:0;background:var(--rust);transition:.35s}
+  .pstep:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(64,26,23,.09);border-color:transparent}
+  .pstep:hover::before{width:100%}
+  .pstep .pn{font-family:'Sora';font-weight:800;font-size:34px;color:var(--bg-alt);-webkit-text-stroke:1px var(--line);line-height:1}
+  .pstep h4{font-size:16px;font-weight:700;color:var(--brown);margin-top:12px}
+  .pstep p{margin-top:8px;font-size:13.5px;color:var(--ink-soft)}
+
+  /* bloco vídeo + texto do processo */
+  .vrow{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:38px}
+  .vrow:last-child{margin-bottom:0}
+  .vrow:nth-child(even) .vtxt{order:2}
+  .vplayer{position:relative;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#1a0d0b;aspect-ratio:16/9}
+  .vplayer iframe{width:100%;height:100%;border:0;display:block}
+  .vplayer .vph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;cursor:default;
+    background:repeating-linear-gradient(45deg,#2a1310,#2a1310 16px,#311612 16px,#311612 32px)}
+  .vplayer .vph .play{width:64px;height:64px;border-radius:50%;background:rgba(192,90,42,.95);display:flex;align-items:center;justify-content:center}
+  .vplayer .vph .play svg{width:26px;height:26px;fill:#fff;margin-left:3px}
+  .vplayer .vph span{font-family:'Sora';font-weight:600;font-size:12px;color:rgba(255,255,255,.7);text-align:center;padding:0 20px;letter-spacing:.02em}
+  .vtxt .eyebrow{margin-bottom:10px;display:block}
+  .vtxt h3{font-size:clamp(20px,2.6vw,28px);font-weight:800}
+  .vtxt p{margin-top:14px;color:var(--ink-soft)}
+  .vtxt .spec{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--bg-alt);border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-family:'Sora';font-weight:600;font-size:13px;color:var(--brown)}
+  .vtxt .spec b{color:var(--rust)}
+
+  /* faixa de acabamentos */
+  .acab{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:14px}
+  .acab .a{background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;border-top:2px solid var(--rust);display:flex;flex-direction:column;transition:.3s}
+  .acab .a:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(64,26,23,.08)}
+  .acab .a .avid{position:relative;aspect-ratio:16/10;background:#1a0d0b;overflow:hidden}
+  .acab .a .avid iframe,.acab .a .avid video{width:100%;height:100%;border:0;display:block;object-fit:cover}
+  .acab .a .avid .vph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+    background:repeating-linear-gradient(45deg,#2a1310,#2a1310 13px,#311612 13px,#311612 26px)}
+  .acab .a .avid .vph .play{width:46px;height:46px;border-radius:50%;background:rgba(192,90,42,.95);display:flex;align-items:center;justify-content:center}
+  .acab .a .avid .vph .play svg{width:20px;height:20px;fill:#fff;margin-left:2px}
+  .acab .a .avid .vph span{font-family:'Sora';font-weight:600;font-size:10px;color:rgba(255,255,255,.65);text-align:center;padding:0 14px;letter-spacing:.02em}
+  .acab .a .ac-body{padding:22px 22px 26px}
+  .acab .a h4{font-size:16px;font-weight:700;color:var(--brown)}
+  .acab .a p{margin-top:8px;font-size:13.5px;color:var(--ink-soft)}
+
+  [data-rv]{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  [data-rv].in{opacity:1;transform:none}
+
+  @media(max-width:1080px){.menu{gap:16px}.menu a{font-size:12.5px}}
+  @media(max-width:980px){
+    .stats{grid-template-columns:repeat(2,1fr);gap:32px}
+    .frow{grid-template-columns:1fr;gap:32px}
+    .frow:nth-child(even) .ftext{order:0}
+    .proc{grid-template-columns:1fr}
+    .proc-steps{grid-template-columns:repeat(2,1fr)}
+    .vrow{grid-template-columns:1fr;gap:28px}
+    .vrow:nth-child(even) .vtxt{order:0}
+    .acab{grid-template-columns:repeat(2,1fr)}
+    .ab-grid{grid-template-columns:1fr}
+    .split{grid-template-columns:1fr;gap:32px}
+    .foot-top{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:680px){
+    .menu,.nav>.btn{display:none}
+    .burger{display:flex}
+    .menu.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:var(--bg);padding:24px 28px;gap:18px;border-bottom:1px solid var(--line);box-shadow:0 20px 40px rgba(64,26,23,.08)}
+    .stats{grid-template-columns:1fr}
+    .proc-steps{grid-template-columns:1fr}
+    .acab{grid-template-columns:1fr}
+    .foot-top{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="index.html" class="logo">COURO TOP <span>®</span></a>
+    <ul class="menu" id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="quem-somos.html">Quem Somos</a></li>
+      <li><a href="solucoes.html">Soluções</a></li>
+      <li><a href="mercados.html">Mercados</a></li>
+      <li><a href="estrutura-industrial.html" class="active">Estrutura Industrial</a></li>
+      <li><a href="materiais.html">Materiais</a></li>
+      <li><a href="homologacoes.html">Homologações</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <a href="contato.html" class="btn btn-primary">Fale com nossa equipe</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="phero">
+  <div class="grid-bg"></div>
+  <span class="cross" style="top:120px;right:14%"></span>
+  <span class="cross" style="bottom:50px;left:10%"></span>
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Estrutura Industrial</div>
+    <h1 data-rv>Estrutura Industrial</h1>
+    <p data-rv>A Couro Top combina desenvolvimento técnico e estrutura industrial para atender projetos com precisão, consistência e confiabilidade.</p>
+  </div>
+</section>
+
+<!-- INDICADORES -->
+<section class="sec stats-band">
+  <div class="grid-bg"></div>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat" data-rv><div class="v" data-count="2000">2000</div><div class="l">Desde — ano de fundação</div></div>
+      <div class="stat" data-rv><div class="v"><span>ISO</span> 9001</div><div class="l">Gestão da qualidade certificada</div></div>
+      <div class="stat" data-rv><div class="v" data-count="130">0</div><div class="l">Conjuntos/dia de capacidade</div></div>
+      <div class="stat" data-rv><div class="v" data-count="290">0</div><div class="l">+ Colaboradores especializados</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CORTE + COSTURA (feature rows) -->
+<section class="sec">
+  <div class="wrap">
+    <div class="frow">
+      <div class="ftext" data-rv>
+        <span class="eyebrow">Corte automatizado</span>
+        <h3>Um dos maiores parques de corte da América Latina</h3>
+        <p>A Couro Top opera um dos maiores parques de corte automatizado para couro da América Latina. A leitura digital do material identifica suas características e otimiza o encaixe das peças, garantindo precisão milimétrica, melhor aproveitamento e total padronização.</p>
+      </div>
+      <div class="ph" data-rv><span class="tag">[ IMAGEM — parque de corte automatizado de couro ]</span></div>
+    </div>
+    <div class="frow">
+      <div class="ftext" data-rv>
+        <span class="eyebrow">Corte multicamadas</span>
+        <h3>Alta capacidade de corte em multicamadas</h3>
+        <p>Além do corte de couro, a Couro Top conta com tecnologia de corte multicamadas — capaz de processar diversas camadas de material simultaneamente. Isso eleva drasticamente a capacidade produtiva, viabilizando grandes volumes com a mesma precisão e padronização.</p>
+        <p>É a estrutura ideal para projetos de escala, em que velocidade de produção e consistência precisam andar juntas — uma capacidade que oferecemos como diferencial a quem precisa de alto volume com qualidade garantida.</p>
+      </div>
+      <div class="ph" data-rv><span class="tag">[ IMAGEM — corte multicamadas em operação ]</span></div>
+    </div>
+    <div class="frow">
+      <div class="ftext" data-rv>
+        <span class="eyebrow">Costura industrial</span>
+        <h3>Precisão e padronização em cada ponto</h3>
+        <p>A costura é um dos pilares da qualidade Couro Top. Nossa linha de produção opera com máquinas eletrônicas de costura PFAFF, configuradas com os mesmos parâmetros — tensão de linha, tamanho e espaçamento de pontos — para que cada peça mantenha exatamente o mesmo padrão.</p>
+        <p>Por serem eletrônicas, as máquinas não perdem a regulagem ao longo da produção, o que assegura repetibilidade e um acabamento uniforme do primeiro ao último conjunto. É essa combinação de tecnologia e equipe técnica especializada que transforma o corte na solução final, com a consistência que cada projeto exige.</p>
+      </div>
+      <div class="vplayer" data-rv>
+        <!-- PARA ATIVAR O VÍDEO: troque a div .vph por:
+             <iframe src="https://www.youtube.com/embed/ID" title="Produção - costura industrial Couro Top" allowfullscreen loading="lazy"></iframe>
+             ou, se for arquivo próprio: <video controls preload="none" poster="img/poster-costura.jpg"><source src="videos/costura.mp4" type="video/mp4"></video>
+             (a CSP já permite youtube.com / vimeo.com) -->
+        <div class="vph"><div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><span>[ VÍDEO — produção costurando (máquinas PFAFF em operação) ]</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSOS E QUALIDADE -->
+<section class="sec alt">
+  <div class="grid-bg" style="opacity:.3"></div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <div class="sec-head" data-rv>
+      <span class="eyebrow">Gestão e qualidade</span>
+      <h2>Processos estruturados e melhoria contínua</h2>
+      <p class="lead">A Couro Top investe em organização, padronização e melhoria contínua. A implantação de CRM em 2003 e a certificação ISO 9001 em 2006 reforçam essa trajetória de profissionalização e compromisso com a qualidade.</p>
+    </div>
+    <div class="miles" style="margin-top:0">
+      <div class="mile"><b>2003</b><span>Implantação de CRM</span></div>
+      <div class="mile"><b>2006</b><span>Certificação ISO 9001</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSO PRODUTIVO -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head" data-rv>
+      <span class="eyebrow">Processo produtivo</span>
+      <h2>Da matéria-prima à entrega, com padronização e tecnologia</h2>
+      <p class="lead">Um processo estruturado em etapas, que une domínio de materiais, corte computadorizado e controle de qualidade para garantir consistência em cada projeto — com prazos de até 72 horas.</p>
+    </div>
+
+    <!-- 4 etapas -->
+    <div class="proc-steps">
+      <div class="pstep" data-rv><div class="pn">01</div><h4>Matéria-prima</h4><p>Seleção e análise criteriosa dos materiais, com laboratório próprio de testes de resistência e durabilidade.</p></div>
+      <div class="pstep" data-rv><div class="pn">02</div><h4>Modelagem e corte</h4><p>Desenvolvimento dos moldes em modelagem digital e corte automatizado de alta precisão, com aproveitamento máximo do material.</p></div>
+      <div class="pstep" data-rv><div class="pn">03</div><h4>Acabamento</h4><p>Acabamentos de superfície e costura programada que garantem qualidade e repetibilidade.</p></div>
+      <div class="pstep" data-rv><div class="pn">04</div><h4>Controle de qualidade</h4><p>Filosofia de autocontrole entre setores e inspeção final antes da entrega.</p></div>
+    </div>
+
+    <!-- vídeo 1: laboratório / matéria-prima -->
+    <div class="vrow">
+      <div class="vplayer" data-rv>
+        <!-- PARA ATIVAR O VÍDEO: troque a div .vph abaixo por:
+             <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO" title="..." allowfullscreen loading="lazy"></iframe>
+             (a CSP já permite youtube.com em frame-src) -->
+        <div class="vph"><div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><span>[ VÍDEO — laboratório de testes / teste de fricção e dinamômetro ]</span></div>
+      </div>
+      <div class="vtxt" data-rv>
+        <span class="eyebrow">Matéria-prima certificada</span>
+        <h3>Laboratório próprio de testes</h3>
+        <p>Todo material passa por análise criteriosa antes de entrar na produção. Testes de fricção e de resistência simulam o uso real e atestam a durabilidade exigida em cada aplicação.</p>
+      </div>
+    </div>
+
+    <!-- vídeo 2: desenvolvimento e modelagem digital -->
+    <div class="vrow">
+      <div class="vplayer" data-rv>
+        <!-- PARA ATIVAR O VÍDEO: troque a div .vph por <iframe ...> ou <video ...> (CSP já permite) -->
+        <div class="vph"><div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><span>[ VÍDEO — setor de desenvolvimento / digitalização de moldes ]</span></div>
+      </div>
+      <div class="vtxt" data-rv>
+        <span class="eyebrow">Onde tudo começa</span>
+        <h3>Desenvolvimento e modelagem digital</h3>
+        <p>Antes de qualquer corte, há um trabalho técnico de precisão. Em nosso setor de desenvolvimento, profissionais especializados utilizam as ferramentas mais atuais de modelagem digital para mapear cada peça com exatidão — incluindo a digitalização automática por foto, que acelera drasticamente o processo de modelagem.</p>
+        <p>Cada molde é tratado, organizado e transferido de forma técnica para as máquinas de corte, garantindo que a produção comece sobre uma base digital precisa. É essa etapa que transforma a necessidade do cliente em um projeto pronto para escalar.</p>
+        <span class="spec">Banco de dados com <b>+5000 moldes digitais</b></span>
+      </div>
+    </div>
+
+    <!-- acabamentos -->
+    <div style="margin-top:48px">
+      <div class="sec-head" data-rv style="margin-bottom:20px">
+        <span class="eyebrow">Acabamentos de superfície</span>
+        <h2 style="font-size:clamp(22px,2.8vw,32px)">Acabamentos sob medida para cada projeto</h2>
+        <p class="lead">Da gravação à personalização, dominamos uma gama completa de acabamentos que unem estética, técnica e resistência do material.</p>
+      </div>
+      <div class="acab">
+
+        <div class="a" data-rv>
+          <div class="avid">
+            <!-- VÍDEO: troque a div .vph por <iframe ...> ou <video ...> (CSP já permite) -->
+            <div class="vph"><div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><span>[ VÍDEO — semi-perfurado ]</span></div>
+          </div>
+          <div class="ac-body"><h4>Semi-perfurado</h4><p>Gravação feita por prensa com temperatura e pressão ideais, garantindo o padrão estético sem prejuízo ao material.</p></div>
+        </div>
+
+        <div class="a" data-rv>
+          <div class="avid">
+            <div class="vph"><div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><span>[ VÍDEO — perfurado ]</span></div>
+          </div>
+          <div class="ac-body"><h4>Perfurado</h4><p>Perfuração precisa por esteira, para acabamentos técnicos e estéticos com respiro e textura.</p></div>
+        </div>
+
+        <div class="a" data-rv>
+          <div class="avid">
+            <div class="vph"><div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><span>[ VÍDEO — costura programada ]</span></div>
+          </div>
+          <div class="ac-body"><h4>Costura programada</h4><p>Desenho criado no computador e replicado fielmente pela costura eletrônica — possibilidades praticamente infinitas.</p></div>
+        </div>
+
+        <div class="a" data-rv>
+          <div class="avid">
+            <div class="vph"><div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><span>[ VÍDEO — bordado personalizado ]</span></div>
+          </div>
+          <div class="ac-body"><h4>Bordados personalizados</h4><p>A assinatura do seu projeto aplicada ao revestimento. Desenvolvemos bordados sob medida — logotipos, marcas e detalhes exclusivos — executados com precisão de máquina e acabamento premium, agregando identidade e sofisticação a cada peça.</p></div>
+        </div>
+
+        <div class="a" data-rv>
+          <div class="avid">
+            <div class="vph"><div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><span>[ VÍDEO — cliché de alta frequência ]</span></div>
+          </div>
+          <div class="ac-body"><h4>Cliché de alta frequência</h4><p>Tecnologia de gravação por alta frequência com controle preciso de temperatura. O ponto exato de calor permite marcar relevos, texturas e logotipos com nitidez — sem comprometer a resistência nem a integridade do material. Precisão técnica a serviço do acabamento perfeito.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AIRBAG -->
+<section class="sec airbag">
+  <div class="grid-bg"></div>
+  <div class="wrap">
+    <span class="eyebrow" data-rv>Segurança e tecnologia em revestimento</span>
+    <h2 data-rv>Costura documentada de Airbag</h2>
+    <p class="intro" data-rv>Revestir um banco com airbag exige uma tecnologia específica: a costura precisa romper no momento exato do acionamento. A Couro Top domina esse processo e foi a primeira empresa a trazê-lo ao Brasil.</p>
+    <div class="ab-seal" data-rv>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2 4 5v6c0 5 3.5 8 8 11 4.5-3 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+      <span><b>Pioneira no Brasil</b> · desde 2001</span>
+    </div>
+
+    <div class="ab-grid">
+      <div class="ab-video" data-rv>
+        <!-- PARA ATIVAR O VÍDEO: o site atual tem um .mp4 do airbag (de 2023). Troque a div .vph por:
+             <video controls preload="none" poster="img/poster-airbag.jpg"><source src="videos/airbag.mp4" type="video/mp4"></video>
+             ou um embed do YouTube. (CSP já permite) -->
+        <div class="vph"><div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><span>[ VÍDEO — demonstração do acionamento / costura de airbag ]</span></div>
+      </div>
+      <div class="ab-side">
+        <div class="ab-stat" data-rv><div class="v"><span>+</span>30.000</div><div class="l">conjuntos produzidos com o sistema documentado</div></div>
+        <div class="ab-stat" data-rv><div class="v">100%</div><div class="l">dos revestimentos documentados e rastreáveis por laudo</div></div>
+      </div>
+    </div>
+
+    <div class="ab-photos" data-rv>
+      <div class="ab-ph"><span>[ FOTO — máquina PFAFF-3715 ]</span></div>
+      <div class="ab-ph"><span>[ FOTO — detalhe da costura de airbag ]</span></div>
+    </div>
+
+    <div class="ab-how" data-rv>
+      <h3>Como funciona o sistema de costura documentada</h3>
+      <p>O revestimento é costurado na máquina <b>PFAFF-3715</b>, que calcula a tensão da linha, o tamanho dos pontos e demais parâmetros, respeitando as características da capa original — aferidas em nosso dinamômetro — para que o acionamento do airbag não seja prejudicado. Cada revestimento recebe um código de barras único, que gera a emissão de um laudo referente à costura. É assim que entregamos segurança com rastreabilidade total em cada conjunto.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPE (PESSOAS) -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head" data-rv>
+      <span class="eyebrow">Base humana</span>
+      <h2>As pessoas por trás da estrutura</h2>
+      <p class="lead">Toda essa capacidade industrial só faz sentido com quem a opera. É a nossa equipe que transforma estrutura e tecnologia em soluções consistentes.</p>
+    </div>
+    <div class="split">
+      <div class="prose" data-rv>
+        <h3 style="font-size:clamp(22px,2.8vw,30px);font-weight:800">Equipe técnica especializada</h3>
+        <p style="margin-top:16px;color:var(--ink-soft)">Nossa equipe reúne experiência prática, conhecimento de materiais e proximidade com o desenvolvimento dos projetos. É essa base humana que sustenta a qualidade da operação — do entendimento da necessidade do cliente até a entrega final.</p>
+        <p style="margin-top:14px;color:var(--ink-soft)">Investir nas pessoas é investir na consistência do que entregamos.</p>
+      </div>
+      <div class="ph" data-rv><span class="tag">[ IMAGEM — equipe técnica / colaboradores em operação ]</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="grid-bg" style="opacity:.4"></div>
+  <span class="cross" style="top:50px;left:14%"></span>
+  <span class="cross" style="bottom:50px;right:14%"></span>
+  <div class="wrap">
+    <span class="eyebrow" data-rv>Capacidade técnica e industrial</span>
+    <h2 data-rv style="margin-top:14px">Leve seu projeto para uma estrutura preparada</h2>
+    <p data-rv class="lead">Nossa equipe está preparada para entender sua necessidade e desenvolver a solução técnica mais adequada para sua aplicação.</p>
+    <a href="contato.html" class="btn btn-primary" data-rv>Fale com a Couro Top <span class="arr">→</span></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a href="index.html" class="logo">COURO TOP <span>®</span></a>
+        <p class="foot-desc">Especialista em desenvolvimento e produção de revestimentos técnicos para assentos. Desde 2000.</p>
+      </div>
+      <div>
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="quem-somos.html">Quem Somos</a></li>
+          <li><a href="solucoes.html">Soluções</a></li>
+          <li><a href="mercados.html">Mercados</a></li>
+          <li><a href="estrutura-industrial.html">Estrutura Industrial</a></li>
+          <li><a href="materiais.html">Materiais</a></li>
+          <li><a href="homologacoes.html">Homologações</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li>(11) 3619-2900</li>
+          <li><a href="https://wa.me/5511974607277" target="_blank" rel="noopener">WhatsApp (11) 97460-7277</a></li>
+          <li><a href="mailto:atendimento@courotop.com">atendimento@courotop.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Matriz</h4>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Couro+Top+Av.+Alexandre+Colares+1032+Parque+Anhanguera+São+Paulo+SP" target="_blank" rel="noopener">Av. Alexandre Colares, 1032</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Couro+Top+Av.+Alexandre+Colares+1032+Parque+Anhanguera+São+Paulo+SP" target="_blank" rel="noopener">Parque Anhanguera — São Paulo/SP</a></li>
+          <li>Filiais: <a href="https://www.google.com/maps/search/?api=1&query=Av.+Orosimbo+Maia+1515+Vila+Itapura+Campinas+SP" target="_blank" rel="noopener">Campinas</a> · <a href="https://www.google.com/maps/search/?api=1&query=Estr.+do+Tindiba+845+Pechincha+Rio+de+Janeiro+RJ" target="_blank" rel="noopener">Rio de Janeiro</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="yr"></span> Couro Top — Todos os direitos reservados.</span>
+      <span>Desenvolvimento e produção de revestimentos técnicos para assentos.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/5511974607277" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.523 5.27l-.999 3.648 3.535-.927zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+</a>
+
+<script>
+  const hdr=document.getElementById('hdr');
+  addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>20));
+  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>menu.classList.toggle('open'));
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('[data-rv]').forEach((el,i)=>{el.style.transitionDelay=(i%3*70)+'ms';io.observe(el)});
+  const cio=new IntersectionObserver((es)=>{es.forEach(e=>{
+    if(!e.isIntersecting)return;const el=e.target,end=+el.dataset.count;
+    if(end>=2000){el.textContent=end;cio.unobserve(el);return}
+    let s=0;const t=setInterval(()=>{s+=Math.ceil(end/40);if(s>=end){s=end;clearInterval(t)}el.textContent=s+'+'},22);
+    cio.unobserve(el);
+  })},{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  // ===== CONVERSÃO: clique no WhatsApp (Lead) =====
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
+    a.addEventListener('click',function(){
+      if(window.fbq) fbq('track','Contact');
+      if(window.gtag) gtag('event','click_whatsapp');
+    });
+  });
+</script>
+</body>
+</html>
