@@ -12,6 +12,8 @@
   # padroniza com www (opcional — descomente se quiser sempre www)
   # RewriteCond %{HTTP_HOST} !^www\. [NC]
   # RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+  # página renomeada: Homologações -> Qualidade (mantém links antigos e SEO)
+  RewriteRule ^homologacoes\.html$ /qualidade.html [R=301,L]
 </IfModule>
 
 # ---- 2. HEADERS DE SEGURANÇA ----
