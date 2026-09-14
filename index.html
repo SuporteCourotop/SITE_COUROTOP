@@ -349,7 +349,7 @@
 <section class="sec quem">
   <div class="wrap split">
     <div class="quem-video" data-rv>
-      <video controls autoplay muted loop preload="auto" poster="poster-tour-fabrica.jpg" playsinline>
+      <video id="quemVideo" controls autoplay muted loop preload="auto" poster="poster-tour-fabrica.jpg" playsinline>
         <source src="tour-fabrica.mp4" type="video/mp4">
         Seu navegador não suporta vídeo HTML5.
       </video>
@@ -564,6 +564,31 @@
       if(window.gtag) gtag('event','click_whatsapp');
     });
   });
+
+  // ===== Vídeo "Quem Somos": tenta iniciar COM som; se o navegador bloquear,
+  // ativa o áudio automaticamente no primeiro gesto do usuário =====
+  (function(){
+    var v=document.getElementById('quemVideo');
+    if(!v) return;
+    function tryUnmute(){
+      v.muted=false;
+      v.volume=1;
+      var p=v.play();
+      if(p&&p.catch){p.catch(function(){});}
+    }
+    // tenta assim que possível
+    if(v.readyState>=2){tryUnmute();}
+    v.addEventListener('loadeddata',tryUnmute,{once:true});
+    // fallback: primeiro gesto do usuário libera o som
+    var events=['pointerdown','click','keydown','touchstart','scroll'];
+    function onGesture(){
+      tryUnmute();
+      if(!v.muted){
+        events.forEach(function(e){window.removeEventListener(e,onGesture);});
+      }
+    }
+    events.forEach(function(e){window.addEventListener(e,onGesture,{passive:true});});
+  })();
 </script>
 </body>
 </html>
