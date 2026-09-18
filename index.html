@@ -183,6 +183,7 @@
   .hero-sub{font-family:'Sora';font-weight:600;font-size:clamp(18px,2.4vw,24px);color:var(--brown-2);margin-top:22px;max-width:52ch;letter-spacing:-.01em}
   .hero-support{margin-top:18px;max-width:48ch;font-size:16px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
+  @media(max-width:520px){.hero-cta{flex-direction:column;align-items:stretch}.hero-cta .btn{width:100%;justify-content:center}}
   .hero-pillars{display:flex;gap:34px;flex-wrap:wrap;margin-top:60px;padding-top:34px;border-top:1px solid var(--line)}
   .pillar{display:flex;align-items:center;gap:12px}
   .pillar svg{width:30px;height:30px;flex:none}
@@ -342,6 +343,11 @@
     <h1 data-rv>Desenvolvimento técnico de revestimentos para assentos, bancos automotivos, interiores e <em>aplicações sob medida.</em></h1>
     <p class="hero-sub" data-rv>Desde 2000, a Couro Top transforma demandas específicas em revestimentos desenvolvidos com critério técnico, domínio de materiais e capacidade industrial.</p>
     <p class="hero-support lead" data-rv>Unimos modelagem, corte automatizado, costura industrial e gestão da qualidade para entregar soluções com padrão, acabamento e consistência produtiva.</p>
+    <div class="hero-cta" data-rv>
+      <a href="contato.html" class="btn btn-primary">Fale com um especialista <span class="arr">→</span></a>
+      <a href="contato.html#ctf" class="btn btn-ghost">Envie seu projeto</a>
+      <a href="contato.html#ctf" class="btn btn-ghost">Solicite uma análise técnica</a>
+    </div>
   </div>
 </section>
 
